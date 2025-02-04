@@ -1,7 +1,6 @@
 {
-  "name": "node-rdap",
-  "version": "0.4.2",
-  "type": "module",
+  "name": "@randock/node-rdap",
+  "version": "0.0.1",
   "main": "./dist/tsc/client.js",
   "types": "./dist/tsc/client.d.ts",
   "files": [
@@ -9,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/dcoffey-zengenti/node-rdap"
+    "url": "git://github.com/randock/node-rdap"
   },
   "author": "Derry coffey <d.coffey@zengenti.com>",
   "license": "MIT",
@@ -53,5 +52,5 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+  "packageManager": "yarn@4.6.0"
 }

@@ -1,5 +1,5 @@
 import NodeCache from "node-cache";
-import { DNSList, fetchDNSList } from "../utils/dns.js";
+import { fetchDNSList } from "../utils/dns.js";
 
 export class DNSCache {
   cache: NodeCache;
@@ -32,18 +32,11 @@ export class DNSCache {
     }
   }
 
-  async set(dnsList: DNSList) {
-    for (const service of dnsList.services) {
-      for (const tld of service[0]) {
-        if (!this.cache.has(tld)) {
-          const server = service[1][0];
-          this.cache.set<string>(
-            tld,
-            server.endsWith("/") ? server.slice(0, -1) : server
-          );
-        }
-      }
-    }
+  async set(topLevelDomain: string, server: string) {
+    this.cache.set<string>(
+      topLevelDomain,
+      server.endsWith("/") ? server.slice(0, -1) : server
+    );
   }
 
   flush() {

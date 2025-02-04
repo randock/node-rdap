@@ -17,10 +17,10 @@ import {
   isFullyQualifiedDomainName,
 } from "./utils/domain.js";
 
-const dnsCache = new DNSCache();
-const ipv4Cache = new IPV4Cache();
-const ipv6Cache = new IPV6Cache();
-const autnumCache = new AutnumCache();
+export const dnsCache = new DNSCache();
+export const ipv4Cache = new IPV4Cache();
+export const ipv6Cache = new IPV6Cache();
+export const autnumCache = new AutnumCache();
 
 const resolveRdapServerByDomain = async (domain: string) => {
   const topLevelDomain = getTopLevelDomain(domain);

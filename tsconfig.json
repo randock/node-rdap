@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2021",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "allowJs": false,
     "esModuleInterop": true,
@@ -21,8 +21,6 @@
     "importHelpers": false,
     "skipLibCheck": true,
     "outDir": "./dist/tsc/",
-    "types": ["node", "jest"],
-    "lib": ["ESNext", "DOM"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", ".vscode"]
